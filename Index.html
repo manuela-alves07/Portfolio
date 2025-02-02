@@ -36,21 +36,18 @@
     </a>
     <script>
         function toggleSobreMim(event) {
-            event.preventDefault(); // Impede o comportamento padrão do link
+            event.preventDefault(); 
             const sobreMimSection = document.getElementById('sobre-mim');
             const imagem = document.querySelector('.Imagem');  // Seleciona a imagem
     
-            // Alterna a classe active na seção
             sobreMimSection.classList.toggle('active');
-            
-            // Se a seção "Sobre mim" estiver ativa, move a imagem para cima
+        
             if (sobreMimSection.classList.contains('active')) {
-                imagem.style.transform = 'translateY(-100%)'; // Mover a imagem para cima
+                imagem.style.transform = 'translateY(-100%)'; 
             } else {
-                imagem.style.transform = 'translateY(0)'; // Retorna a imagem para a posição original
+                imagem.style.transform = 'translateY(0)'; 
             }
-    
-            // Verifica se a seção está visível
+
             if (sobreMimSection.classList.contains('active')) {
                 sobreMimSection.scrollIntoView({ behavior: 'smooth' });
             }

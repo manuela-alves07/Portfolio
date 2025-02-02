@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header></header>
+    <main class="titulo">
+        <p>Olá, eu sou a Manuela
+            <br>Alves</p>
+        <p class="subtitulo">Entusiasta em Desenvolvimento Front End</p>
+    </main>
+    <nav class="menu">
+        <a class="menu_item" href="#sobre-mim" onclick="toggleSobreMim(event)">Sobre mim</a>
+        <a class="menu_item" href="https://www.linkedin.com/in/manuela-loureiro-alves-a6619a26a/">LinkedIn</a>
+        <a class="menu_item" href="curriculo.pdf" download>Baixar Currículo</a>
+    </nav>
+    <img src="Imagem.jpeg" alt="Foto de perfil" class="Imagem">
+
+    <section id="sobre-mim">
+        <p>Olá, sou a Manuela Loureiro Alves, estudante de Sistemas de Informação na PUCC. A área de tecnologia sempre me atraiu muito, principalmente pela sua constante evolução e pelo impacto que tem no nosso dia a dia. Durante minha trajetória, percebi que o Front-End se tornou uma área que me fascina ainda mais. O que me cativou foi a possibilidade de visualizar meu progresso de forma imediata, algo que não acontece com todas as linguagens de programação. No Front-End, posso ver na hora como o meu trabalho toma forma e isso me motiva a continuar explorando.
+
+            Além disso, o Front-End me permite explorar o meu lado criativo, sempre buscando deixar as interfaces mais bonitas, funcionais e com uma "cara" mais agradável. Gosto de pensar que o design e a estética de uma página ou aplicativo podem melhorar a experiência do usuário e torná-la única.
+            
+            No meu tempo livre, gosto de praticar esportes e me manter ativa, seja fazendo exercícios ao ar livre ou descobrindo novos esportes. Também sou fã de carros e tudo o que envolve esse universo, sempre curiosa sobre novos modelos e inovações.
+            
+            Estou sempre em busca de novos aprendizados e desafios que me ajudem a crescer como profissional e como pessoa.</p>
+    </section>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a class="whats" href="https://web.whatsapp.com/send?phone=5541996503514" target="_blank">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+    <script>
+        function toggleSobreMim(event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+            const sobreMimSection = document.getElementById('sobre-mim');
+            const imagem = document.querySelector('.Imagem');  // Seleciona a imagem
+    
+            // Alterna a classe active na seção
+            sobreMimSection.classList.toggle('active');
+            
+            // Se a seção "Sobre mim" estiver ativa, move a imagem para cima
+            if (sobreMimSection.classList.contains('active')) {
+                imagem.style.transform = 'translateY(-100%)'; // Mover a imagem para cima
+            } else {
+                imagem.style.transform = 'translateY(0)'; // Retorna a imagem para a posição original
+            }
+    
+            // Verifica se a seção está visível
+            if (sobreMimSection.classList.contains('active')) {
+                sobreMimSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+    
+    
+    <footer></footer>
+
+    </body>
+</html>

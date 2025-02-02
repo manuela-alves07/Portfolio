@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&family=Oswald:wght@500&display=swap');
+
+.Imagem {
+    width: 100%;
+    max-width: 510px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 50%; 
+    transform: translateY(-50%); 
+    transition: transform 0.5s ease-out;
+}
+
+.titulo{
+    text-align: start;
+    margin: 0 auto;
+    font-size: 70px;
+    position: relative;
+    left: 80px;
+    top:160px;
+    font-family: "Anton", serif;
+    
+
+}
+.subtitulo{
+    font-family:"Oswald", serif;
+    font-size:40px;
+
+    }
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    overflow-x:hidden;
+    overflow: hidden;
+    height: 100%;
+
+}
+
+.menu{
+    display: flex;
+    justify-content:space-around;
+    position: fixed;
+    top:0;
+    width: 70%;
+    z-index:1000;
+    text-align: center;
+}
+
+.menu_item{
+    padding: 25px 20px;
+    height: 70px;
+    font-family:"Oswald", serif;
+    width: 45%;
+    font-size: 20px;
+    color:black;
+    text-decoration: none;
+
+}
+
+main{
+    margin-top: 0 auto;
+    padding:80px;
+
+}
+
+.navbar{
+    background-color: aqua;
+    
+}
+
+a:hover{
+    background-color: rgba(192, 196, 199, 0.904);
+}
+
+.whats{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right: 40px;
+    background-color: #25d366;
+    color:#fff;
+    text-align: center;
+    border-radius:50px;
+    font-size: 30px;
+    box-shadow:1px 1px 2px #888;
+    z-index:1000;
+
+}
+
+.fa-whatsapp{
+    margin-top: 16px;
+}
+
+#sobre-mim {
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color:white;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    font-family:"Oswald", serif;
+    font-size: 17px;
+    text-align:justify;
+    position: relative;
+   top:-600px;
+   line-height: 30px;
+   opacity: 0;
+
+}
+#sobre-mim.active{
+    max-height: 3000px;
+    padding:260px;
+    opacity: 1;
+
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+#sobre-mim.active ~ .Imagem {
+    transform: translateY(-100%); 
+
+}
+
+.page {
+    display: none; 
+}
+.page:not(.hide) {
+    display: block; 
+} 
